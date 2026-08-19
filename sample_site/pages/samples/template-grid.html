@@ -1,0 +1,44 @@
+<div class="template-tabs-container">
+    <details name="template-tabs" open>
+        <summary>Sample</summary>
+        <div>
+            Template grid is css only component. It is used to create a grid layout for your content.
+        </div>
+    </details>
+
+    <details name="template-tabs">
+        <summary>CSS</summary>
+        <div>
+            <pre><code class="language-css">{{ "./sample_site/pages/independent-components/template-grid/template-grid.html.css" | readFileForCode | safe }}</code></pre>
+
+            <button id="copy-css-code-btn" data-btn-bg="default" data-btn-size="xs" class="mt-3">Copy code</button>
+        </div>
+    </details>
+    <details name="template-tabs">
+        <summary>JavaScript</summary>
+        <div>
+            <p>No JavaScript is required for this component.</p>
+        </div>
+    </details>
+    <details name="template-tabs">
+        <summary>About</summary>
+        <div>
+            {{ "./sample_site/pages/independent-components/template-grid/README.md" | readMarkdownAsHtml | safe }}
+        </div>
+    </details>
+</div>
+<style>
+    .template-tabs-container pre {
+        overflow-x: auto;
+        padding: 1rem;
+        border: 1px solid #d4d4d7;
+        background-color: #f0f0f0;
+    }
+
+    .template-tabs-container>details[name="template-tabs"]>div>h1 {
+        display: none;
+    }
+</style>
+<script>
+    {% include "../../../src/js/copy-code.js" %}
+</script>

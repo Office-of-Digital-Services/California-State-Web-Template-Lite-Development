@@ -1,0 +1,2 @@
+# Keep Nunjucks templates untouched by Prettier
+**/*.njk

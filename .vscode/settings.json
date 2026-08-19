@@ -1,0 +1,25 @@
+{
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "prettier.documentSelectors": ["**/*.njk"],
+  "emmet.includeLanguages": {
+    "njk": "html"
+  },
+  "formattingToggle.affects": ["editor.formatOnSave"],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+  "search.useIgnoreFiles": true,
+  "html.customData": ["./src/html-data/state-template.html-data.json"]
+}

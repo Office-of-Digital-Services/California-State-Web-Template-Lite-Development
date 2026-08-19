@@ -1,0 +1,52 @@
+{%- extends "./base.njk" -%}
+{%- block content -%}
+<div id="main-content" class="main-content">
+  <div class="container pt-2">
+    <main class="main-primary" id="main">
+      <nav aria-label="You are here" class="template-breadcrumbs">
+        <ol>
+          <li>
+            <a href="/index.html" title="Home page">Home</a>
+          </li>
+          <li>Samples</li>
+          <li>{{ title | title }}</li>
+        </ol>
+      </nav>
+      <div class="row">
+        <div
+          class="col-lg-3 pe-lg-5" role="complementary">
+          <!-- Side navigation -->
+          <div class="template-side-navigation-wrapper">
+          <details
+            aria-label="Toggle side navigation"
+            aria-expanded="false"
+            aria-controls="template-side-navigation-content">
+            <summary>
+              <span data-role="side-navigation-toggle">Side navigation</span>
+            </summary>
+          </details>
+          <div id="template-side-navigation-content" class="px-0">
+            <nav aria-label="Side navigation" class="side-navigation">
+              <ul>
+                {%- for entry in collections.all | allSamples %}
+                  <li>
+                    <a href="{{ entry.url }}" data-active="{{ 'true' if entry.url == page.url }}" {{ 'aria-current="page"' if entry.url == page.url }}>
+                      {{ entry.data.title | title }}
+                    </a>
+                  </li>
+                {%- endfor %}
+              </ul>
+            </nav>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-9 pb-5">
+          <h1 class="mt-lg-0">{{ title | title }}</h1>
+          <!-- BEGIN SAMPLE CONTENT -->
+          {{ content | SampleCodeUseMainSiteImages | safe }}
+          <!-- END SAMPLE CONTENT -->
+        </div>
+      </div>
+    </main>
+  </div>
+</div>{%- endblock -%}

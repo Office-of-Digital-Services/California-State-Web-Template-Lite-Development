@@ -1,0 +1,10 @@
+---
+layout: null
+permalink: "css/template.lite.css"
+eleventyExcludeFromCollections: true
+---
+
+{%- set css -%}
+{% include "../../../src/css/_all.njk" %}
+{%- endset -%}
+{{ css | safe }}

@@ -1,0 +1,52 @@
+{
+  "name": "state-template-lite-development",
+  "version": "0.0.1",
+  "description": "CA State Web Template Lite Development Project",
+  "author": {
+    "name": "Carter Medlin",
+    "email": "carter.medlin@state.ca.gov",
+    "url": "https://github.com/carterm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Office-of-Digital-Services/California-State-Web-Template-Lite-Development.git"
+  },
+    "bugs": "https://github.com/Office-of-Digital-Services/California-State-Web-Template-Lite-Development/issues",
+  "license": "MIT",
+  "homepage": "https://template.webstandards.ca.gov/",
+  "scripts": {
+    "start": "cross-env MY_ENVIRONMENT=local run-p watch:js watch:eleventy",
+    "build": "run-p build:*",
+    "buildFullCSS": "FULL_CSS_BUILD=true run-p build:*",
+    "watch:js": "rollup --config rollup.config.js --watch",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "build:js": "rollup --config rollup.config.js",
+    "build:eleventy": "npx @11ty/eleventy",
+    "GIT cleanup": "git clean -fd",
+    "stylelint-rules-prettier-check": "stylelint-config-prettier-scss-check",
+    "stylelint run fix": "npx stylelint '**/*.{css,scss}' --fix"
+  },
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@rollup/plugin-terser": "^0.1.0",
+    "bootstrap": "^5.3.8",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-nested": "^7.0.2",
+    "rollup": "^2.79.2"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "8.56.0",
+    "eslint-plugin-jsdoc": "^48.2.0",
+    "postcss-aspect-ratio-polyfill": "^2.0.0",
+    "prettier": "^3.8.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-config-standard-scss": "^10.0.0"
+  }
+}

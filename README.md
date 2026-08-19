@@ -1,16 +1,103 @@
-# California State Web Template Development
+# California State Web Template Lite Development
 
-This repository contains the development source code for the California State Web Template, an HTML template and website standard offered by the California Department of Technology to state agencies and departments within the State of California and beyond.
+This repository contains the development source code for the California State Web Template Lite, an independent, stand-alone component library for California government websites.
 
-The California State Web Template is designed to promote a responsive and standard look and feel to ensure a uniform user experience across state entities. The web template includes many usability, security and accessibility requirements and is updated regularly to meet evolving industry standards and best practices.
+## About State Web Template Lite
 
-The state web template is an open source project which you can find on the [CA Office of Digital Services GitHub repository](https://github.com/Office-of-Digital-Services). There are various technology versions of the web template available for consumption. Collaboration is highly encouraged and user feedback and contributions are always considered and often implemented.
+State Web Template Lite is an independent, stand-alone component library for California government websites. Each component is designed to be dropped into a page with minimal setup and without framework lock-in.
 
-## How to use this repository
+### Built for a no-code first workflow
 
-You can use this repository to download, clone, fork or contribute to the development of the state web template. You can also browse the components, search icons, explore color themes and learn what's new in the latest version of the template.
+Most teams can implement Template Lite components using only HTML and CSS. This no-code approach makes adoption faster, reduces maintenance complexity, and keeps content teams productive.
 
-To download or clone this repository, click on the green **Code** button on the top right corner of this page. You can also use the command line to clone the repository using `git clone https://github.com/Office-of-Digital-Services/California-State-Web-Template-Development.git`.
+- Independent components that can be used one at a time
+- Consistent visual patterns across pages and services
+- Simple integration into static sites, CMS pages, and server-rendered templates
+
+### JavaScript is progressive enhancement
+
+Components are built to work without JavaScript whenever possible. JavaScript is included to enhance accessibility, provide polyfills for broader browser support, and improve usability in advanced interactions.
+
+- Accessibility enhancements for interactive controls
+- Polyfills for cross-browser behavior and compatibility
+- Usability improvements such as better keyboard and interaction handling
+
+### Use what you need
+
+You can start with a single component and expand over time. Template Lite is intentionally modular, so teams can scale from one page pattern to a complete design implementation at their own pace.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher recommended)
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Office-of-Digital-Services/California-State-Web-Template-Lite-Development.git
+cd California-State-Web-Template-Lite-Development
+npm install
+```
+
+### NPM Commands
+
+**Start development server** - Watches for changes and serves the site locally:
+
+```bash
+npm start
+```
+
+**Build the project** - Creates optimized production files:
+
+```bash
+npm run build
+```
+
+**Build with full CSS** - Generates a complete CSS build:
+
+```bash
+npm run buildFullCSS
+```
+
+**Watch JavaScript** - Watches and rebuilds JavaScript files only:
+
+```bash
+npm run watch:js
+```
+
+**Watch Eleventy** - Watches and rebuilds Eleventy templates only:
+
+```bash
+npm run watch:eleventy
+```
+
+**Build JavaScript** - Builds JavaScript files without watching:
+
+```bash
+npm run build:js
+```
+
+**Build Eleventy** - Builds Eleventy templates without watching:
+
+```bash
+npm run build:eleventy
+```
+
+**Stylelint** - Check CSS/SCSS for linting issues and auto-fix:
+
+```bash
+npm run stylelint run fix
+```
+
+## How to Use This Repository
+
+You can use this repository to download, clone, fork or contribute to the development of the State Web Template Lite. You can also browse the components, explore color themes and learn what's new in the latest version of the template.
+
+To download or clone this repository, click on the green **Code** button on the top right corner of this page. You can also use the command line to clone the repository using `git clone https://github.com/Office-of-Digital-Services/California-State-Web-Template-Lite-Development.git`.
 
 To fork this repository, click on the **Fork** button on the top right corner of this page. This will create a copy of this repository in your own GitHub account that you can modify and customize.
 

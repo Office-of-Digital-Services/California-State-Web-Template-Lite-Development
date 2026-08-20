@@ -2,14 +2,14 @@
     <details name="template-tabs" open>
         <summary>Sample</summary>
         <div style="overflow-x: hidden;">
-            <div> {% include "../independent-components/template-header-full/template-header-full.html" %}</div>
+            <div> {% include "../../../components/template-header-full/template-header-full.html" %}</div>
 
         </div>
     </details>
     <details name="template-tabs">
         <summary>HTML</summary>
         <div>
-            <pre><code class="language-html">{{ "./sample_site/pages/independent-components/template-header-full/template-header-full.html" | readFileForCode | safe }}</code></pre>
+            <pre><code class="language-html">{{ "./components/template-header-full/template-header-full.html" | readFileForCode | safe }}</code></pre>
 
             <button id="copy-html-code-btn" data-btn-bg="default" data-btn-size="xs" class="mt-3">Copy code</button>
         </div>
@@ -17,7 +17,7 @@
     <details name="template-tabs">
         <summary>CSS</summary>
         <div>
-            <pre><code class="language-css">{{ "./sample_site/pages/independent-components/template-header-full/template-header-full.html.css" | readFileForCode | safe }}</code></pre>
+            <pre><code class="language-css">{{ "./components/template-header-full/template-header-full.html.css" | readFileForCode | safe }}</code></pre>
 
             <button id="copy-css-code-btn" data-btn-bg="default" data-btn-size="xs" class="mt-3">Copy code</button>
         </div>
@@ -25,7 +25,7 @@
     <details name="template-tabs">
         <summary>JavaScript</summary>
         <div>
-            <pre><code class="language-javascript">{{ "./sample_site/pages/independent-components/template-header-full/template-header-full.html.js" | readFileForCode | safe }}</code></pre>
+            <pre><code class="language-javascript">{{ "./components/template-header-full/template-header-full.html.js" | readFileForCode | safe }}</code></pre>
 
             <button id="copy-js-code-btn" data-btn-bg="default" data-btn-size="xs" class="mt-3">Copy code</button>
         </div>
@@ -33,7 +33,7 @@
     <details name="template-tabs">
         <summary>About</summary>
         <div>
-            {{ "./sample_site/pages/independent-components/template-header-full/README.md" | readMarkdownAsHtml | safe
+            {{ "./components/template-header-full/README.md" | readMarkdownAsHtml | safe
             }}
         </div>
     </details>

@@ -14,13 +14,16 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/fonts": "/fonts",
     "sample_site/images": "images",
-    "sample_site/siteRoot": "/"
+    "sample_site/siteRoot": "/",
+    components: "/components"
   });
 
   // Watch the ./src/css/ folder for changes
   eleventyConfig.addWatchTarget("./src/**/*");
   eleventyConfig.addWatchTarget("./sample_site/**/*.html.*");
-  eleventyConfig.addWatchTarget("./sample_site/pages/independent-components/**/*.css");
+  eleventyConfig.addWatchTarget(
+    "./sample_site/pages/independent-components/**/*.css"
+  );
 
   // Ignore this file that gets dynamically created
   eleventyConfig.watchIgnores.add("./src/css/cagov/template-comments.css");
@@ -136,7 +139,11 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
   // Read file content and escape HTML for code display
   const fs = require("fs");
   const markdownIt = require("markdown-it");
-  const markdownRenderer = markdownIt({ html: true, linkify: true, typographer: true });
+  const markdownRenderer = markdownIt({
+    html: true,
+    linkify: true,
+    typographer: true
+  });
 
   eleventyConfig.addFilter("readMarkdownAsHtml", filePath => {
     try {
@@ -149,7 +156,7 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
     }
   });
 
-  eleventyConfig.addFilter("readFileForCode", (filePath) => {
+  eleventyConfig.addFilter("readFileForCode", filePath => {
     try {
       const fullPath = path.join(__dirname, filePath);
       const content = fs.readFileSync(fullPath, "utf-8");

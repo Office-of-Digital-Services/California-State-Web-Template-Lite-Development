@@ -4,7 +4,7 @@
   data-btn-bg="default"
   data-btn-size="xs"
   class="mt-5"
-  href="/template-card.html">
+  href="/standalone-samples/template-card.html">
   Open standalone card
 </a>
 
@@ -12,46 +12,46 @@
 
 <catmplt-tabs>
   <div data-name="tabs-container">
-  <details name="template-tabs">
-    <summary>HTML</summary>
-    <div>
-      <pre><code class="language-html">{{ "./components/catmplt-card/catmplt-card.html" | readFileForCode | safe }}</code></pre>
+    <details name="template-tabs">
+      <summary>HTML</summary>
+      <div>
+        <pre><code class="language-html">{{ "./components/catmplt-card/catmplt-card.html" | readFileForCode | safe }}</code></pre>
 
-      <button
-        id="copy-html-code-btn"
-        data-btn-bg="default"
-        data-btn-size="xs"
-        class="mt-3">
-        Copy code
-      </button>
-    </div>
-  </details>
-  <details name="template-tabs">
-    <summary>CSS</summary>
-    <div>
-      <pre><code class="language-css">{{ "./components/catmplt-card/catmplt-card.html.css" | readFileForCode | safe }}</code></pre>
+        <button
+          id="copy-html-code-btn"
+          data-btn-bg="default"
+          data-btn-size="xs"
+          class="mt-3">
+          Copy code
+        </button>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>CSS</summary>
+      <div>
+        <pre><code class="language-css">{{ "./components/catmplt-card/catmplt-card.html.css" | readFileForCode | safe }}</code></pre>
 
-      <button
-        id="copy-css-code-btn"
-        data-btn-bg="default"
-        data-btn-size="xs"
-        class="mt-3">
-        Copy code
-      </button>
-    </div>
-  </details>
-  <details name="template-tabs">
-    <summary>JavaScript</summary>
-    <div>
-      <p>No JavaScript is required for this component.</p>
-    </div>
-  </details>
-  <details name="template-tabs">
-    <summary>About</summary>
-    <div>
-      {{ "./components/catmplt-card/README.md" | readMarkdownAsHtml | safe }}
-    </div>
-  </details>
+        <button
+          id="copy-css-code-btn"
+          data-btn-bg="default"
+          data-btn-size="xs"
+          class="mt-3">
+          Copy code
+        </button>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>JavaScript</summary>
+      <div>
+        <p>No JavaScript is required for this component.</p>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>About</summary>
+      <div>
+        {{ "./components/catmplt-card/README.md" | readMarkdownAsHtml | safe }}
+      </div>
+    </details>
   </div>
 </catmplt-tabs>
 <style>

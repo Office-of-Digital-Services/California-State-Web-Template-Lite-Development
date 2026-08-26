@@ -8,7 +8,7 @@ catmplt-cagov-header {
   }
 
   /* cagov shell styles */
-  & div {
+  > div {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -42,6 +42,14 @@ catmplt-cagov-header {
       &:focus {
         color: var(--color-p2-darker, #035376);
       }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     > div {

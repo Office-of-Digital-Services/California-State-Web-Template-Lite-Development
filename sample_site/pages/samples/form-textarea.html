@@ -1,11 +1,11 @@
 <h2>Sample</h2>
-{% include "../../../components/catmplt-form-textarea/catmplt-form-textarea.html"
-%}
+{% include
+"../../../components/catmplt-form-textarea/catmplt-form-textarea.html" %}
 <a
   data-btn-bg="default"
   data-btn-size="xs"
   class="mt-5"
-  href="/template-form-textarea.html">
+  href="/standalone-samples/template-form-textarea.html">
   Open standalone form textarea
 </a>
 
@@ -13,47 +13,47 @@
 
 <catmplt-tabs>
   <div data-name="tabs-container">
-  <details name="template-tabs">
-    <summary>HTML</summary>
-    <div>
-      <pre><code class="language-html">{{ "./components/catmplt-form-textarea/catmplt-form-textarea.html" | readFileForCode | safe }}</code></pre>
+    <details name="template-tabs">
+      <summary>HTML</summary>
+      <div>
+        <pre><code class="language-html">{{ "./components/catmplt-form-textarea/catmplt-form-textarea.html" | readFileForCode | safe }}</code></pre>
 
-      <button
-        id="copy-html-code-btn"
-        data-btn-bg="default"
-        data-btn-size="xs"
-        class="mt-3">
-        Copy code
-      </button>
-    </div>
-  </details>
-  <details name="template-tabs">
-    <summary>CSS</summary>
-    <div>
-      <pre><code class="language-css">{{ "./components/catmplt-form-textarea/catmplt-form-textarea.html.css" | readFileForCode | safe }}</code></pre>
+        <button
+          id="copy-html-code-btn"
+          data-btn-bg="default"
+          data-btn-size="xs"
+          class="mt-3">
+          Copy code
+        </button>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>CSS</summary>
+      <div>
+        <pre><code class="language-css">{{ "./components/catmplt-form-textarea/catmplt-form-textarea.html.css" | readFileForCode | safe }}</code></pre>
 
-      <button
-        id="copy-css-code-btn"
-        data-btn-bg="default"
-        data-btn-size="xs"
-        class="mt-3">
-        Copy code
-      </button>
-    </div>
-  </details>
-  <details name="template-tabs">
-    <summary>JavaScript</summary>
-    <div>
-      <p>No JavaScript is required for this component.</p>
-    </div>
-  </details>
-  <details name="template-tabs">
-    <summary>About</summary>
-    <div>
-      {{ "./components/catmplt-form-textarea/README.md" | readMarkdownAsHtml |
-      safe }}
-    </div>
-  </details>
+        <button
+          id="copy-css-code-btn"
+          data-btn-bg="default"
+          data-btn-size="xs"
+          class="mt-3">
+          Copy code
+        </button>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>JavaScript</summary>
+      <div>
+        <p>No JavaScript is required for this component.</p>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>About</summary>
+      <div>
+        {{ "./components/catmplt-form-textarea/README.md" | readMarkdownAsHtml |
+        safe }}
+      </div>
+    </details>
   </div>
 </catmplt-tabs>
 <style>

@@ -1,6 +1,6 @@
-import "../../components/cagov-header-full/cagov-header-full.html.js";
-import "../../components/cagov-utility-header/cagov-utility-header.html.js";
-import "../../components/template-accordion/template-accordion.html.js";
-import "../../components/template-header-full/template-header-full.html.js";
-import "../../components/template-side-navigation/template-side-navigation.html.js";
-import "../../components/template-tabs/template-tabs.html.js";
+import "../../components/catmplt-cagov-header-full/catmplt-cagov-header-full.html.js";
+import "../../components/catmplt-cagov-utility-header/catmplt-cagov-utility-header.html.js";
+import "../../components/catmplt-accordion/catmplt-accordion.html.js";
+import "../../components/catmplt-header/catmplt-header.html.js";
+import "../../components/catmplt-side-navigation/catmplt-side-navigation.html.js";
+import "../../components/catmplt-tabs/catmplt-tabs.html.js";

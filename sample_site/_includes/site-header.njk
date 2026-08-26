@@ -123,18 +123,18 @@
         <!-- START > div:nth-of-type(2) (Search Form) -->
         <div id="template-header-full__cagov-search">
           <form
-            action="https://www.ca.gov/search/"
+            action="/serp.html"
             method="get"
             role="search"
             aria-label="Search CA.gov">
             <label for="template-search-input" class="template-sr-only"
-              >Search CA.gov</label
+              >Search this site</label
             >
             <input
               type="search"
               id="template-search-input"
               name="q"
-              placeholder="Search CA.gov"
+              placeholder="Search this site"
               aria-describedby="template-search-button" />
             <button
               type="submit"
@@ -170,7 +170,6 @@
         <div id="template-header-full__main-menu">
           <nav aria-label="Main navigation">
             <ul>
-             
               <li>
                 <a href="{{(collections.all | allSamples)[0].url}}">Components</a>
               </li>
@@ -179,7 +178,6 @@
                   >About</a
                 >
               </li>
-              
             </ul>
           </nav>
         </div>

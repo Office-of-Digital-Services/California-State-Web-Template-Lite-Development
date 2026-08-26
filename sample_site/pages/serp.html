@@ -6,41 +6,63 @@ permalink: /serp.html
 <div id="main-content" class="main-content">
   <main class="main-primary" id="main">
     <!--Search result section-->
-    <div class="section section-default">
-      <div class="container search-results-header">
-        <!--Uncomment if you prefer to use original google search box. Be advised that original custom search box is not meeting WCAG accessibility standards. -->
-        <!--<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
 
-        <form id="Search" class="d-flex" action="?">
-          <span class="sr-only" id="SearchInput">Custom Google Search</span>
-          <input
-            type="search"
-            id="q"
-            name="q"
-            aria-labelledby="SearchInput"
-            placeholder="Search this website"
-            class="search-textfield height-50 ps-2"
-            style="width:95%" />
-          <button
-            type="submit"
-            class="gsc-search-button width-60 height-50 color-white border-0 bg-gray-600 bg-gray-800-hover">
-            <span class="ca-gov-icon-search" aria-hidden="true"></span>
-            <span class="sr-only">Submit</span>
-          </button>
-        </form>
-        <script>
-          // extracting search query from the url parameter and applying it to the searchbox
-          document
-            .querySelector('input[name=q]')
-            .value = new URLSearchParams(window.location.search).get("q");
-        </script>
+    <catmplt-page-header>
+      <!--Page Header Component
+data-page-header-bg options: "understated", "understated-gradient", "primary", "primary-gradient", "standout"
+-->
+      <div data-page-header-bg="understated">
+        <!-- Content Container -->
+        <div>
+          <catmplt-featured-search>
+            <!-- 
+          Featured Search Component 
+          data-variant options: "dark"
+          -->
+            <form id="Search" class="template-featured-search" action="?">
+              <span id="TemplateSearchInput" data-sr-only="true"
+                >Custom Google Search</span
+              >
+              <input
+                type="search"
+                id="q"
+                name="q"
+                aria-labelledby="SearchInput"
+                placeholder="Search this website"
+                aria-labelledby="TemplateSearchInput"
+                placeholder="Search" />
+              <button type="submit">
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  aria-hidden="true"
+                  viewBox="0 0 2400 2400">
+                  <path
+                    d="M2253 1833l-71-59-224-181-317-262c65-116 99-245 99-376c0-195-75-390-226-541-147-147-342-219-541-219-411 0-760 349-760 760c0 414 343 764 757 764c154 0 308-46 439-136l326 270l223 180l77 64c38 31 93 26 124-12l106-128c31-37 26-93-12-124zm-945-546c-92 92-212 137-335 137-250 0-466-212-466-469c0-250 212-466 466-466c260 0 472 212 472 466c0 120-48 240-137 332z" />
+                </svg>
+                <span data-sr-only="true">Submit</span>
+              </button>
+            </form>
+            <script>
+              // extracting search query from the url parameter and applying it to the searchbox
+              document
+                .querySelector('#q')
+                .value = new URLSearchParams(window.location.search).get("q");
+            </script>
+          </catmplt-featured-search>
+        </div>
       </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <gcse:searchresults-only></gcse:searchresults-only>
-        <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
-      </div>
+    </catmplt-page-header>
+
+    <div class="container pt-5 pb-5">
+      <h1>Search Results</h1>
+      <!--Uncomment if you prefer to use original google search box. Be advised that original custom search box is not meeting WCAG accessibility standards. -->
+      <!--<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>-->
+
+      <gcse:searchresults-only></gcse:searchresults-only>
+      <!-- <script src='//www.google.com/jsapi' type='text/javascript'></script> -->
     </div>
   </main>
 </div>

@@ -1,0 +1,73 @@
+<h2>Sample</h2>
+{% include "../../../components/catmplt-buttons/catmplt-button.html" %}
+
+<hr class="mt-5" />
+<a
+  data-btn-bg="default"
+  data-btn-size="xs"
+  class="mt-5"
+  href="/template-buttons.html">
+  Open standalone buttons
+</a>
+
+<h2>Code and notes</h2>
+
+<catmplt-tabs>
+  <div data-name="tabs-container">
+  <details name="template-tabs">
+    <summary>HTML</summary>
+    <div>
+      <pre><code class="language-html">{{ "./components/catmplt-buttons/catmplt-button.html" | readFileForCode | safe }}</code></pre>
+
+      <button
+        id="copy-html-code-btn"
+        data-btn-bg="default"
+        data-btn-size="xs"
+        class="mt-3">
+        Copy code
+      </button>
+    </div>
+  </details>
+  <details name="template-tabs">
+    <summary>CSS</summary>
+    <div>
+      <pre><code class="language-css">{{ "./components/catmplt-buttons/catmplt-button.html.css" | readFileForCode | safe }}</code></pre>
+
+      <button
+        id="copy-css-code-btn"
+        data-btn-bg="default"
+        data-btn-size="xs"
+        class="mt-3">
+        Copy code
+      </button>
+    </div>
+  </details>
+  <details name="template-tabs">
+    <summary>JavaScript</summary>
+    <div>
+      <p>No JavaScript is required for this component.</p>
+    </div>
+  </details>
+  <details name="template-tabs">
+    <summary>About</summary>
+    <div>
+      {{ "./components/catmplt-buttons/README.md" | readMarkdownAsHtml | safe }}
+    </div>
+  </details>
+  </div>
+</catmplt-tabs>
+<style>
+  catmplt-tabs [data-name="tabs-container"] pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border: 1px solid #d4d4d7;
+      background-color: #f0f0f0;
+  }
+
+  catmplt-tabs [data-name="tabs-container"] > details > div > h1 {
+      display: none;
+  }
+</style>
+<script>
+  {% include "../../../src/js/copy-code.js" %}
+</script>

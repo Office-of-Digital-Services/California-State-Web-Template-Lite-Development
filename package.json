@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Office-of-Digital-Services/California-State-Web-Template-Lite-Development.git"
   },
-    "bugs": "https://github.com/Office-of-Digital-Services/California-State-Web-Template-Lite-Development/issues",
+  "bugs": "https://github.com/Office-of-Digital-Services/California-State-Web-Template-Lite-Development/issues",
   "license": "MIT",
   "homepage": "https://template.webstandards.ca.gov/",
   "scripts": {
@@ -22,9 +22,7 @@
     "watch:eleventy": "npx @11ty/eleventy --serve",
     "build:js": "rollup --config rollup.config.js",
     "build:eleventy": "npx @11ty/eleventy",
-    "GIT cleanup": "git clean -fd",
-    "stylelint-rules-prettier-check": "stylelint-config-prettier-scss-check",
-    "stylelint run fix": "npx stylelint '**/*.{css,scss}' --fix"
+    "GIT cleanup": "git clean -fd"
   },
   "private": true,
   "type": "commonjs",
@@ -37,16 +35,17 @@
     "postcss-nested": "^7.0.2",
     "rollup": "^2.79.2"
   },
+  "overrides": {
+    "purgecss@7.0.2": {
+      "postcss-selector-parser": "7.1.7"
+    }
+  },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@fullhuman/postcss-purgecss": "7.0.2",
     "cross-env": "^7.0.3",
     "eslint": "8.56.0",
     "eslint-plugin-jsdoc": "^48.2.0",
     "postcss-aspect-ratio-polyfill": "^2.0.0",
-    "prettier": "^3.8.0",
-    "stylelint": "^15.10.2",
-    "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-recommended-scss": "^12.0.0",
-    "stylelint-config-standard-scss": "^10.0.0"
+    "prettier": "^3.8.0"
   }
 }

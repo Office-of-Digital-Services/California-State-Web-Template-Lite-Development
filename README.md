@@ -30,7 +30,7 @@ You can start with a single component and expand over time. Template Lite is int
 
 ### Prerequisites
 
-- Node.js (v16 or higher recommended)
+- Node.js 22 or 24 (LTS)
 - npm
 
 ### Installation
@@ -87,11 +87,23 @@ npm run build:js
 npm run build:eleventy
 ```
 
-**Stylelint** - Check CSS/SCSS for linting issues and auto-fix:
+### CSS validation and dependency auditing
 
-```bash
-npm run stylelint run fix
-```
+VS Code's built-in CSS/SCSS validation is enabled, and Prettier remains the
+default formatter. Stylelint and its custom rules/autofix commands have been
+removed to eliminate their dependency on the unpatched `braces` advisory
+[GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm).
+Built-in validation does not replace Stylelint's custom checks.
+
+The PurgeCSS PostCSS plugin is pinned to `7.0.2` to avoid the same dependency
+chain in version 8. A scoped override uses `postcss-selector-parser@7.1.7`
+with PurgeCSS 7 to fix
+[GHSA-rj75-hqrm-r3gf](https://github.com/advisories/GHSA-rj75-hqrm-r3gf).
+Review the dependency tree and override before upgrading.
+
+Run `npm audit` to check all dependencies, including development tooling.
+Avoid repeated `npm audit fix --force` runs: they can introduce breaking changes
+and cannot fix advisories without an available patched dependency.
 
 ## How to Use This Repository
 

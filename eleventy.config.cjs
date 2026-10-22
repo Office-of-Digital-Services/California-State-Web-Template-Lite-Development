@@ -3,7 +3,7 @@ const docSiteUrl = "https://template.webstandards.ca.gov/";
 const path = require("path");
 const postcss = require("postcss");
 const postcssNested = require("postcss-nested");
-const PurgeCSS = require("@fullhuman/postcss-purgecss");
+const PurgeCSS = require("@fullhuman/postcss-purgecss").default;
 
 /**
  * @typedef {import("@11ty/eleventy/src/defaultConfig").defaultConfig} EleventyDefaultConfig
@@ -96,7 +96,6 @@ module.exports = function (/** @type {EleventyConfig} **/ eleventyConfig) {
 
       // Normal dev build → run PurgeCSS
       const result = await postcss([
-        // @ts-ignore
         PurgeCSS({
           content: contentPaths,
           safelist: [

@@ -17,9 +17,8 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "css.validate": false,
-  "scss.validate": false,
-  "stylelint.validate": ["css", "scss"],
+  "css.validate": true,
+  "scss.validate": true,
   "search.useIgnoreFiles": true,
   "html.customData": ["./src/html-data/state-template.html-data.json"]
 }

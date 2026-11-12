@@ -87,17 +87,17 @@ catmplt-cagov-header-full {
       }
     }
 
-    > div:first-child {
+    > #catmplt-cagov-header-full__utility-bar {
       background-color: var(--color-p2-soft, #f5f9fa);
       min-height: 42px;
     }
 
-    > div:last-child {
+    > #catmplt-cagov-header-full__branding {
       border-bottom: 2px solid var(--gray-150, #e2e2e3);
     }
 
     /* UTILITY BAR */
-    > div:first-child > div {
+    > #catmplt-cagov-header-full__utility-bar > div {
       display: flex;
       gap: 0.5rem;
       flex-flow: column wrap;
@@ -111,7 +111,7 @@ catmplt-cagov-header-full {
         align-items: center;
       }
 
-      > div:nth-of-type(2) {
+      > #catmplt-cagov-header-full__login-link {
         display: flex;
         flex-direction: column;
         gap: 0.2rem;
@@ -147,7 +147,7 @@ catmplt-cagov-header-full {
         }
       }
 
-      > div:last-of-type > nav > ul {
+      > #cagov-header-full__utility-menu > nav > ul {
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -256,7 +256,7 @@ catmplt-cagov-header-full {
 
     /* BOTTOM BAR/BRANDING */
     /* stylelint-disable no-descending-specificity */
-    > div:last-child > div {
+    > #catmplt-cagov-header-full__branding > div {
       display: flex;
       justify-content: flex-start;
       flex-flow: column wrap;
@@ -289,7 +289,7 @@ catmplt-cagov-header-full {
         }
       }
 
-      > div:nth-of-type(2) {
+      > #cagov-header-full__search-form {
         display: none;
         width: 100%;
         order: 1;
@@ -357,7 +357,7 @@ catmplt-cagov-header-full {
         }
       }
 
-      > div:last-of-type {
+      > #cagov-header-full__main-menu-content {
         display: none;
         width: 100%;
         position: relative;
@@ -417,8 +417,6 @@ catmplt-cagov-header-full {
                 text-decoration: none;
                 margin-left: -1rem;
                 margin-right: -1rem;
-                border-top: 1px solid var(--gray-200, #d4d4d7);
-
                 &:hover,
                 &:focus {
                   background-color: var(--gray-50, #fafafa);
@@ -437,10 +435,10 @@ catmplt-cagov-header-full {
                   font-size: 1.125rem;
                 }
               }
+            }
 
-              &:first-child > a {
-                border-top: none;
-              }
+            > li + li > a {
+              border-top: 1px solid var(--gray-200, #d4d4d7);
             }
           }
         }

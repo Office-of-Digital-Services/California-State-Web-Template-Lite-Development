@@ -1,6 +1,6 @@
 <catmplt-cagov-header>
   <div>
-    <div>
+    <div id="catmplt-cagov-header__utility-bar">
       <div>
         <div>
           <details>
@@ -14,41 +14,39 @@
           </details>
         </div>
 
-        <div>
-          <details>
-            <summary>CA.gov menu</summary>
-            <div>
-              <nav aria-label="ca.gov navigation">
-                <ul>
-                  <li>
-                    <a href="https://www.ca.gov/services/index.html"
-                      >Services</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://www.ca.gov/departments/index.html"
-                      >Departments</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://www.ca.gov/about-california/index.html"
-                      >About California</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://www.ca.gov/support/index.html">Get help</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </details>
+        <details
+          id="catmplt-cagov-header__menu-toggle"
+          aria-controls="catmplt-cagov-header__menu-content">
+          <summary>CA.gov menu</summary>
+        </details>
+        <div id="catmplt-cagov-header__menu-content">
+          <nav aria-label="ca.gov navigation">
+            <ul>
+              <li>
+                <a href="https://www.ca.gov/services/index.html">Services</a>
+              </li>
+              <li>
+                <a href="https://www.ca.gov/departments/index.html"
+                  >Departments</a
+                >
+              </li>
+              <li>
+                <a href="https://www.ca.gov/about-california/index.html"
+                  >About California</a
+                >
+              </li>
+              <li>
+                <a href="https://www.ca.gov/support/index.html">Get help</a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <!--end cagov-menu-->
       </div>
       <!--end cagov-top-bar -->
     </div>
-    <!--end cagov-header__1-utility-->
-    <div>
+    <!--end #catmplt-cagov-header__utility-bar-->
+    <div id="catmplt-cagov-header__branding">
       <div>
         <a
           href="https://www.ca.gov/index.html"
@@ -128,7 +126,7 @@
       </div>
       <!--end cagov-header__2-branding-->
     </div>
-    <!--end cagov-header__1-bottom-bar-->
+    <!--end #catmplt-cagov-header__branding-->
   </div>
   <!--end cagov-header-->
 </catmplt-cagov-header>

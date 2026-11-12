@@ -1,6 +1,7 @@
 # CA.gov Header
 
 ## Custom Tag Usage
+
 Use this component with its custom wrapper tag:
 
 ```html
@@ -8,7 +9,6 @@ Use this component with its custom wrapper tag:
   <!-- component markup -->
 </catmplt-cagov-header>
 ```
-
 
 This component is the standard CA.gov header shell used to present official statewide branding, trust messaging, and core search functionality. It is included here for reference, implementation consistency, and structural understanding.
 
@@ -29,8 +29,12 @@ The component is wrapped in:
 
 ```html
 <div>
-  <!-- Utility / Trust Region -->
-  <!-- Branding / Search Region -->
+  <div id="catmplt-cagov-header__utility-bar">
+    <!-- Utility / Trust Region -->
+  </div>
+  <div id="catmplt-cagov-header__branding">
+    <!-- Branding / Search Region -->
+  </div>
 </div>
 ```
 
@@ -68,18 +72,21 @@ This region is the main branded interaction layer and should be preserved intact
 ## Structural Outline
 
 ```html
-div.cagov-header
-  div  /* Utility / Trust Region */
+catmplt-cagov-header
+  div
+  div#catmplt-cagov-header__utility-bar  /* Utility / Trust Region */
     div
       div
         details  /* Official California website */
-      div
-        details  /* CA.gov menu */
-  div  /* Branding / Search Region */
+      details#catmplt-cagov-header__menu-toggle  /* CA.gov menu button */
+      div#catmplt-cagov-header__menu-content    /* CA.gov navigation */
+  div#catmplt-cagov-header__branding  /* Branding / Search Region */
     div
       a        /* CA.gov logo */
       div      /* Search form */
 ```
+
+The utility and branding regions are selected by their IDs in CSS. Their inner wrappers use direct-child selectors to preserve the expected layout structure.
 
 ## Guidance
 

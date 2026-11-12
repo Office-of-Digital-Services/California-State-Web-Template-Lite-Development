@@ -65,7 +65,7 @@ catmplt-header {
     }
 
     /* cagov official styles */
-    > div:first-child {
+    > div#catmplt-header-full__utility-bar {
       background-color: var(--color-p2-soft, #f5f9fa);
       min-height: 42px;
 
@@ -170,7 +170,7 @@ catmplt-header {
 
     /* bottom bar/branding styles */
     /* stylelint-disable no-descending-specificity */
-    > div:last-child {
+    > div#catmplt-header-full__branding {
       border-bottom: 2px solid var(--gray-150, #e2e2e3);
 
       > div {
@@ -394,7 +394,7 @@ catmplt-header {
           }
         }
 
-        > div:nth-of-type(2) {
+        > #catmplt-header-full__cagov-search {
           display: none;
           width: 100%;
           order: 1;
@@ -450,7 +450,7 @@ catmplt-header {
           }
         }
 
-        > div:last-of-type {
+        > #catmplt-header-full__main-menu {
           display: none;
           width: 100%;
           position: relative;
@@ -510,7 +510,6 @@ catmplt-header {
                   text-decoration: none;
                   margin-left: -1rem;
                   margin-right: -1rem;
-                  border-top: 1px solid var(--gray-200, #d4d4d7);
 
                   &:hover,
                   &:focus {
@@ -530,10 +529,10 @@ catmplt-header {
                     font-size: 1.125rem;
                   }
                 }
+              }
 
-                &:first-child > a {
-                  border-top: none;
-                }
+              > li + li > a {
+                border-top: 1px solid var(--gray-200, #d4d4d7);
               }
             }
           }

@@ -1,6 +1,7 @@
 # Template Header Full Component
 
 ## Custom Tag Usage
+
 Use this component with its custom wrapper tag:
 
 ```html
@@ -8,7 +9,6 @@ Use this component with its custom wrapper tag:
   <!-- component markup -->
 </catmplt-header>
 ```
-
 
 The Template Header Full component provides a complete, responsive header solution including a utility bar (CA.gov branding) and a main branding bar with site-specific logo, search, and navigation.
 
@@ -20,8 +20,8 @@ The component's HTML structure must remain consistent, as the CSS utilizes direc
 
 ```html
 <div>
-  <!-- 1st Child: Utility Bar (CA.gov Branding) -->
-  <div>
+  <!-- Utility Bar (CA.gov Branding) -->
+  <div id="catmplt-header-full__utility-bar">
     <div>
       <!-- CA.gov Logo & Official Text -->
       <div>...</div>
@@ -30,8 +30,8 @@ The component's HTML structure must remain consistent, as the CSS utilizes direc
     </div>
   </div>
 
-  <!-- 2nd Child: Branding Bar (Site Specific) -->
-  <div>
+  <!-- Branding Bar (Site Specific) -->
+  <div id="catmplt-header-full__branding">
     <div>
       <!-- Site Logo -->
       <div>...</div>
@@ -56,20 +56,25 @@ The component's HTML structure must remain consistent, as the CSS utilizes direc
 
 ## CSS Parent-to-Children Selector Method
 
-This component relies on a strict parent-to-child relationship in CSS to minimize the need for internal class names. By targeting elements like `> div:first-child` and `> div > div`, the stylesheet remains modular and scoped to the `<catmplt-header>` root.
+The utility and branding bars are targeted by their IDs, rather than by their position as the first or last child. The CSS selectors `> div#catmplt-header-full__utility-bar` and `> div#catmplt-header-full__branding` select those direct children of the component's root wrapper. This keeps the bar-level styling tied to each bar's explicit identifier if sibling elements are added or reordered.
+
+Within each bar, the stylesheet uses direct-child selectors such as `> div` and `> nav` to target the internal structure. Keep the documented nesting in the HTML example consistent with those selectors.
 
 ### Benefits
-- **Cleaner HTML**: Fewer classes cluttering the markup.
-- **Structural Integrity**: The CSS enforces a consistent HTML structure, which helps maintain accessibility and design standards.
+
+- **Explicit Bar Targeting**: IDs identify the utility and branding bars independently of their sibling order.
+- **Structural Integrity**: Direct-child selectors target the expected internal structure, which helps maintain accessibility and design standards.
 - **Scoped Styling**: All internal element styles are strictly scoped to the header root, preventing leakage.
 
 ### Implementation Details
-- **Utility Bar**: Targeted via `> div:first-child`.
-- **Branding Bar**: Targeted via `> div:last-child`.
-- **Containers**: Inner wrappers use width constraints and flexbox layout, targeted via `> div > div`.
+
+- **Utility Bar**: Targeted via `> div#catmplt-header-full__utility-bar`.
+- **Branding Bar**: Targeted via `> div#catmplt-header-full__branding`.
+- **Containers**: Inner wrappers use width constraints and flexbox layout, targeted via direct-child selectors such as `> div`.
 - **Interactive Elements**: Search and Menu triggers use the native `<details>` element, with styles applied via `> details`.
 
 ## Responsive Behavior
+
 - **Mobile (< 992px)**: Search and Navigation menus are hidden behind `<details>` triggers.
 - **Desktop (>= 992px)**: Search form and Navigation menu are displayed inline.
 - **Official Branding**: The "Official website" text visibility is managed based on screen width.

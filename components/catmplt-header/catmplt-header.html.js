@@ -38,7 +38,7 @@ function detailsNamePolyfill() {
  */
 function templateHeaderFullAccessibilityToggle() {
   const detailsToggles = document.querySelectorAll(
-    'details[name="template-header-full__buttongroup"]'
+    'details[name="catmplt-header-full__buttongroup"]'
   );
 
   detailsToggles.forEach(detailsToggle => {

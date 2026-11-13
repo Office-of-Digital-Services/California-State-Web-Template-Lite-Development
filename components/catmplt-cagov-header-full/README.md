@@ -1,6 +1,7 @@
 # CA.gov Header Full
 
 ## Custom Tag Usage
+
 Use this component with its custom wrapper tag:
 
 ```html
@@ -8,7 +9,6 @@ Use this component with its custom wrapper tag:
   <!-- component markup -->
 </catmplt-cagov-header-full>
 ```
-
 
 This component is the full CA.gov header shell used to present official statewide branding and core navigation. It is included here for reference, implementation consistency, and structural understanding.
 
@@ -30,8 +30,12 @@ The component is wrapped in:
 
 ```html
 <div>
-  <!-- Utility Bar -->
-  <!-- Bottom Bar / Branding -->
+  <div id="catmplt-cagov-header-full__utility-bar">
+    <!-- Utility Bar -->
+  </div>
+  <div id="catmplt-cagov-header-full__branding">
+    <!-- Bottom Bar / Branding -->
+  </div>
 </div>
 ```
 
@@ -74,21 +78,23 @@ This region is the main branded interaction layer and should be preserved intact
 
 ```html
 div.cagov-header-full
-  div  /* Utility Bar */
+  div#catmplt-cagov-header-full__utility-bar  /* Utility Bar */
     div
       details  /* Official California website */
       div      /* Official California website content */
-      div      /* Login */
+      div#catmplt-cagov-header-full__login-link  /* Login */
       details  /* Utility menu */
-      div      /* Utility navigation */
-  div  /* Bottom Bar / Branding */
+      div#cagov-header-full__utility-menu  /* Utility navigation */
+  div#catmplt-cagov-header-full__branding  /* Bottom Bar / Branding */
     div
       div      /* CA.gov logo */
       details  /* Search button */
-      div      /* Search form */
+      div#cagov-header-full__search-form  /* Search form */
       details  /* Main menu */
-      div      /* Main navigation */
+      div#cagov-header-full__main-menu-content  /* Main navigation */
 ```
+
+CSS targets the utility and branding bars by ID. The login, utility menu, search form, and main-menu content are also selected by their explicit IDs; direct-child selectors remain for the nested layout.
 
 ## Guidance
 

@@ -1,6 +1,7 @@
 # CA.gov Utility Header
 
 ## Custom Tag Usage
+
 Use this component with its custom wrapper tag:
 
 ```html
@@ -8,7 +9,6 @@ Use this component with its custom wrapper tag:
   <!-- component markup -->
 </catmplt-cagov-utility-header>
 ```
-
 
 This component is the compact CA.gov utility header shell used to present official statewide branding, navigation access, and search within a single utility bar. It is included here for reference, implementation consistency, and structural understanding.
 
@@ -84,13 +84,15 @@ This region supports global CA.gov search access and should be preserved intact.
 div.cagov-utility-header
   div   /* Utility Wrapper */
     div /* Container */
-      div /* Utility Bar */
+      div#catmplt-cagov-utility-header__utility-bar /* Utility Bar */
         div      /* CA.gov logo */
         details  /* CA.gov menu button */
-        div      /* CA.gov menu content */
+        div#cagov-utility-header__menu-content /* CA.gov menu content */
         details  /* Search button */
-        div      /* Search content */
+        div#cagov-utility-header__search-content /* Search content */
 ```
+
+CSS targets the utility bar, menu content, and search content by ID. The surrounding wrapper and container continue to use direct-child selectors for layout, and each `<details>` control remains adjacent to its associated collapsible panel.
 
 ## Guidance
 

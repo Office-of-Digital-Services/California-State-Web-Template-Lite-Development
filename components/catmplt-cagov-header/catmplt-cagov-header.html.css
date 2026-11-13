@@ -138,6 +138,12 @@ catmplt-cagov-header {
           outline-offset: -2px;
         }
 
+        @media (prefers-reduced-motion: reduce) {
+          > input[type="search"] {
+            transition: none;
+          }
+        }
+
         > button[type="submit"] {
           outline-offset: -4px;
           outline-color: var(--outline-dark-mode-color, #85cbf9);
@@ -169,7 +175,7 @@ catmplt-cagov-header {
       flex-direction: column;
       flex-wrap: wrap;
 
-      > div:first-child {
+      > div:first-of-type {
         flex: 1 1 auto;
       }
 
@@ -217,6 +223,10 @@ catmplt-cagov-header {
             transform: rotate(225deg);
             transition: 200ms;
             vertical-align: middle;
+
+            @media (prefers-reduced-motion: reduce) {
+              transition: none;
+            }
           }
         }
 
@@ -226,7 +236,7 @@ catmplt-cagov-header {
         }
       }
 
-      > div:first-child > details {
+      > div:first-of-type > details {
         font-size: 0.875rem;
 
         > summary {

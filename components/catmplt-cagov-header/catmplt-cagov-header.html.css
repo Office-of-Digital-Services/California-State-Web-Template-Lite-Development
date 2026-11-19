@@ -75,13 +75,13 @@ catmplt-cagov-header {
       }
     }
 
-    > #catmplt-cagov-header-utility-bar {
+    > [id="catmplt-cagov-header-utility-bar"] {
       background-color: var(--color-p2-soft, #f5f9fa);
       min-height: 42px;
     }
 
     /* cagov branding styles */
-    > #catmplt-cagov-header-branding > div {
+    > [id="catmplt-cagov-header-branding"] > div {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -168,14 +168,14 @@ catmplt-cagov-header {
       }
     }
 
-    > #catmplt-cagov-header-utility-bar > div {
+    > [id="catmplt-cagov-header-utility-bar"] > div {
       padding-top: 0.2rem;
       padding-bottom: 0.5rem;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
 
-      > div:first-of-type {
+      > [id="catmplt-cagov-header-official"] {
         flex: 1 1 auto;
       }
 
@@ -184,8 +184,8 @@ catmplt-cagov-header {
         align-items: flex-start;
       }
 
-      > div > details,
-      > #catmplt-cagov-header-menu-toggle {
+      > [id="catmplt-cagov-header-official"] > details,
+      > [id="catmplt-cagov-header-menu-toggle"] {
         > div {
           padding-top: 1rem;
           padding-bottom: 1rem;
@@ -236,7 +236,7 @@ catmplt-cagov-header {
         }
       }
 
-      > div:first-of-type > details {
+      > [id="catmplt-cagov-header-official"] > details {
         font-size: 0.875rem;
 
         > summary {
@@ -246,7 +246,7 @@ catmplt-cagov-header {
       }
 
       /* cagov menu toggle styles */
-      > #catmplt-cagov-header-menu-toggle {
+      > [id="catmplt-cagov-header-menu-toggle"] {
         margin-left: 0;
         display: flex;
         align-items: center;
@@ -272,7 +272,7 @@ catmplt-cagov-header {
       }
 
       /* cagov menu content styles */
-      > #catmplt-cagov-header-menu-content {
+      > [id="catmplt-cagov-header-menu-content"] {
         display: none;
         width: 100%;
         order: 1;
@@ -321,8 +321,8 @@ catmplt-cagov-header {
         }
       }
 
-      > #catmplt-cagov-header-menu-toggle[open]
-        + #catmplt-cagov-header-menu-content {
+      > [id="catmplt-cagov-header-menu-toggle"][open]
+        + [id="catmplt-cagov-header-menu-content"] {
         display: block;
       }
     }

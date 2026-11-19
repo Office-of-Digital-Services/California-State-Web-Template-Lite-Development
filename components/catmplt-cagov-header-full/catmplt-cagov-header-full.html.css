@@ -87,17 +87,17 @@ catmplt-cagov-header-full {
       }
     }
 
-    > #catmplt-cagov-header-full-utility-bar {
+    > [id="catmplt-cagov-header-full-utility-bar"] {
       background-color: var(--color-p2-soft, #f5f9fa);
       min-height: 42px;
     }
 
-    > #catmplt-cagov-header-full-branding {
+    > [id="catmplt-cagov-header-full-branding"] {
       border-bottom: 2px solid var(--gray-150, #e2e2e3);
     }
 
     /* UTILITY BAR */
-    > #catmplt-cagov-header-full-utility-bar > div {
+    > [id="catmplt-cagov-header-full-utility-bar"] > div {
       display: flex;
       gap: 0.5rem;
       flex-flow: column wrap;
@@ -111,7 +111,7 @@ catmplt-cagov-header-full {
         align-items: center;
       }
 
-      > #catmplt-cagov-header-full-login-link {
+      > [id="catmplt-cagov-header-full-login-link"] {
         display: flex;
         flex-direction: column;
         gap: 0.2rem;
@@ -147,7 +147,7 @@ catmplt-cagov-header-full {
         }
       }
 
-      > #catmplt-cagov-header-full-utility-menu > nav > ul {
+      > [id="catmplt-cagov-header-full-utility-menu"] > nav > ul {
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -178,7 +178,7 @@ catmplt-cagov-header-full {
         }
       }
 
-      > details:first-of-type {
+      > details[aria-controls="catmplt-cagov-header-full-official-ca-gov"] {
         flex-grow: 1;
         flex-shrink: 0;
 
@@ -191,7 +191,8 @@ catmplt-cagov-header-full {
         }
       }
 
-      > details:last-of-type > summary {
+      > details[aria-controls="catmplt-cagov-header-full-utility-menu"]
+        > summary {
         font-size: 0.95rem;
         padding: 0.35rem 0.5rem;
         right: 0.5rem;
@@ -202,8 +203,8 @@ catmplt-cagov-header-full {
         }
       }
 
-      > details:first-of-type,
-      > details:last-of-type {
+      > details[aria-controls="catmplt-cagov-header-full-official-ca-gov"],
+      > details[aria-controls="catmplt-cagov-header-full-utility-menu"] {
         > summary {
           list-style: none;
           text-decoration: underline;
@@ -256,7 +257,7 @@ catmplt-cagov-header-full {
 
     /* BOTTOM BAR/BRANDING */
     /* stylelint-disable no-descending-specificity */
-    > #catmplt-cagov-header-full-branding > div {
+    > [id="catmplt-cagov-header-full-branding"] > div {
       display: flex;
       justify-content: flex-start;
       flex-flow: column wrap;
@@ -267,7 +268,7 @@ catmplt-cagov-header-full {
         align-items: center;
       }
 
-      > div:first-of-type {
+      > [id="catmplt-cagov-header-full-logo"] {
         flex-grow: 1;
         flex-shrink: 0;
         width: 100%;
@@ -289,7 +290,7 @@ catmplt-cagov-header-full {
         }
       }
 
-      > #catmplt-cagov-header-full-search-form {
+      > [id="catmplt-cagov-header-full-search-form"] {
         display: none;
         width: 100%;
         order: 1;
@@ -357,7 +358,7 @@ catmplt-cagov-header-full {
         }
       }
 
-      > #catmplt-cagov-header-full-main-menu-content {
+      > [id="catmplt-cagov-header-full-main-menu-content"] {
         display: none;
         width: 100%;
         position: relative;
@@ -445,7 +446,7 @@ catmplt-cagov-header-full {
       }
 
       /* Main menu styles */
-      > details:last-of-type {
+      > details[aria-controls="catmplt-cagov-header-full-main-menu-content"] {
         > summary {
           list-style: none;
           padding: 0.5rem;
@@ -456,7 +457,7 @@ catmplt-cagov-header-full {
             display: none;
           }
 
-          > span:first-child {
+          > span:not([aria-hidden="true"]) {
             position: absolute !important;
             width: 1px !important;
             height: 1px !important;
@@ -468,7 +469,7 @@ catmplt-cagov-header-full {
             border: 0 !important;
           }
 
-          > span:last-child {
+          > span[aria-hidden="true"] {
             position: relative;
             display: block;
             width: 34px;
@@ -505,7 +506,7 @@ catmplt-cagov-header-full {
             display: block;
           }
 
-          > summary > span:last-child {
+          > summary > span[aria-hidden="true"] {
             background-color: var(--white, #fff);
 
             &::before {
@@ -522,7 +523,7 @@ catmplt-cagov-header-full {
       }
 
       /* Search styles */
-      > details:first-of-type {
+      > details[aria-controls="catmplt-cagov-header-full-search-form"] {
         height: 2.5rem;
 
         > summary {

@@ -78,7 +78,7 @@ catmplt-cagov-utility-header {
         }
 
         /* Utility Bar */
-        > #catmplt-cagov-utility-header__utility-bar {
+        > #catmplt-cagov-utility-header-utility-bar {
           width: 100%;
           display: flex;
           flex-wrap: wrap;
@@ -223,8 +223,8 @@ catmplt-cagov-utility-header {
           }
 
           /* Collapsible content styles */
-          > #cagov-utility-header__menu-content,
-          > #cagov-utility-header__search-content {
+          > #catmplt-cagov-utility-header-menu-content,
+          > #catmplt-cagov-utility-header-search-content {
             background-color: var(--color-p2-soft, #f5f9fa);
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -246,7 +246,7 @@ catmplt-cagov-utility-header {
           }
 
           /* Navigation styles (CA.gov Menu Content) */
-          > #cagov-utility-header__menu-content > nav > ul {
+          > #catmplt-cagov-utility-header-menu-content > nav > ul {
             list-style: none;
             display: flex;
             flex-direction: column;
@@ -268,7 +268,7 @@ catmplt-cagov-utility-header {
           }
 
           /* Search styles (Search Content) */
-          > #cagov-utility-header__search-content > form {
+          > #catmplt-cagov-utility-header-search-content > form {
             display: flex;
             align-items: center;
             justify-content: center;

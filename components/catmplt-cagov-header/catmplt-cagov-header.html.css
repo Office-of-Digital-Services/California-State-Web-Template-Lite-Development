@@ -75,13 +75,13 @@ catmplt-cagov-header {
       }
     }
 
-    > #catmplt-cagov-header__utility-bar {
+    > #catmplt-cagov-header-utility-bar {
       background-color: var(--color-p2-soft, #f5f9fa);
       min-height: 42px;
     }
 
     /* cagov branding styles */
-    > #catmplt-cagov-header__branding > div {
+    > #catmplt-cagov-header-branding > div {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -168,7 +168,7 @@ catmplt-cagov-header {
       }
     }
 
-    > #catmplt-cagov-header__utility-bar > div {
+    > #catmplt-cagov-header-utility-bar > div {
       padding-top: 0.2rem;
       padding-bottom: 0.5rem;
       display: flex;
@@ -185,7 +185,7 @@ catmplt-cagov-header {
       }
 
       > div > details,
-      > #catmplt-cagov-header__menu-toggle {
+      > #catmplt-cagov-header-menu-toggle {
         > div {
           padding-top: 1rem;
           padding-bottom: 1rem;
@@ -246,7 +246,7 @@ catmplt-cagov-header {
       }
 
       /* cagov menu toggle styles */
-      > #catmplt-cagov-header__menu-toggle {
+      > #catmplt-cagov-header-menu-toggle {
         margin-left: 0;
         display: flex;
         align-items: center;
@@ -272,7 +272,7 @@ catmplt-cagov-header {
       }
 
       /* cagov menu content styles */
-      > #catmplt-cagov-header__menu-content {
+      > #catmplt-cagov-header-menu-content {
         display: none;
         width: 100%;
         order: 1;
@@ -321,8 +321,8 @@ catmplt-cagov-header {
         }
       }
 
-      > #catmplt-cagov-header__menu-toggle[open]
-        + #catmplt-cagov-header__menu-content {
+      > #catmplt-cagov-header-menu-toggle[open]
+        + #catmplt-cagov-header-menu-content {
         display: block;
       }
     }

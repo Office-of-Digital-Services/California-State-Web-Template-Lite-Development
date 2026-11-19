@@ -78,14 +78,14 @@ catmplt-cagov-utility-header {
         }
 
         /* Utility Bar */
-        > #catmplt-cagov-utility-header__utility-bar {
+        > [id="catmplt-cagov-utility-header-utility-bar"] {
           width: 100%;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
 
           /* CA.gov Logo */
-          > div:first-of-type {
+          > [id="catmplt-cagov-utility-header-logo"] {
             display: inline-block;
             flex-grow: 1;
             flex-shrink: 0;
@@ -100,7 +100,7 @@ catmplt-cagov-utility-header {
           }
 
           /* CA.gov Menu Button */
-          > details:first-of-type {
+          > details[aria-controls="catmplt-cagov-utility-header-menu-content"] {
             > summary {
               margin-left: auto;
               background: none;
@@ -149,7 +149,7 @@ catmplt-cagov-utility-header {
           }
 
           /* Search Button */
-          > details:last-of-type {
+          > details[aria-controls="catmplt-cagov-utility-header-search-content"] {
             display: flex;
             align-items: center;
             line-height: 1;
@@ -223,8 +223,8 @@ catmplt-cagov-utility-header {
           }
 
           /* Collapsible content styles */
-          > #cagov-utility-header__menu-content,
-          > #cagov-utility-header__search-content {
+          > [id="catmplt-cagov-utility-header-menu-content"],
+          > [id="catmplt-cagov-utility-header-search-content"] {
             background-color: var(--color-p2-soft, #f5f9fa);
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -234,8 +234,8 @@ catmplt-cagov-utility-header {
           }
 
           /* Collapsible content toggles */
-          > details:first-of-type,
-          > details:last-of-type {
+          > details[aria-controls="catmplt-cagov-utility-header-menu-content"],
+          > details[aria-controls="catmplt-cagov-utility-header-search-content"] {
             + div {
               display: none;
             }
@@ -246,7 +246,7 @@ catmplt-cagov-utility-header {
           }
 
           /* Navigation styles (CA.gov Menu Content) */
-          > #cagov-utility-header__menu-content > nav > ul {
+          > [id="catmplt-cagov-utility-header-menu-content"] > nav > ul {
             list-style: none;
             display: flex;
             flex-direction: column;
@@ -268,7 +268,7 @@ catmplt-cagov-utility-header {
           }
 
           /* Search styles (Search Content) */
-          > #cagov-utility-header__search-content > form {
+          > [id="catmplt-cagov-utility-header-search-content"] > form {
             display: flex;
             align-items: center;
             justify-content: center;

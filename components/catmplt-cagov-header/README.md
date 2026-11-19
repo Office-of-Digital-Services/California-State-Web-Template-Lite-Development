@@ -29,10 +29,10 @@ The component is wrapped in:
 
 ```html
 <div>
-  <div id="catmplt-cagov-header__utility-bar">
+  <div id="catmplt-cagov-header-utility-bar">
     <!-- Utility / Trust Region -->
   </div>
-  <div id="catmplt-cagov-header__branding">
+  <div id="catmplt-cagov-header-branding">
     <!-- Branding / Search Region -->
   </div>
 </div>
@@ -74,13 +74,13 @@ This region is the main branded interaction layer and should be preserved intact
 ```html
 catmplt-cagov-header
   div
-  div#catmplt-cagov-header__utility-bar  /* Utility / Trust Region */
+  div#catmplt-cagov-header-utility-bar  /* Utility / Trust Region */
     div
       div
         details  /* Official California website */
-      details#catmplt-cagov-header__menu-toggle  /* CA.gov menu button */
-      div#catmplt-cagov-header__menu-content    /* CA.gov navigation */
-  div#catmplt-cagov-header__branding  /* Branding / Search Region */
+      details#catmplt-cagov-header-menu-toggle  /* CA.gov menu button */
+      div#catmplt-cagov-header-menu-content    /* CA.gov navigation */
+  div#catmplt-cagov-header-branding  /* Branding / Search Region */
     div
       a        /* CA.gov logo */
       div      /* Search form */

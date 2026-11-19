@@ -21,20 +21,20 @@ The component's HTML structure must remain consistent, as the CSS utilizes direc
 ```html
 <div>
   <!-- Utility Bar (CA.gov Branding) -->
-  <div id="catmplt-header-full__utility-bar">
+  <div id="catmplt-header-utility-bar">
     <div>
       <!-- CA.gov Logo & Official Text -->
-      <div>...</div>
+      <div id="catmplt-header-official">...</div>
       <!-- Utility Links -->
-      <div>...</div>
+      <div id="catmplt-header-utility-links">...</div>
     </div>
   </div>
 
   <!-- Branding Bar (Site Specific) -->
-  <div id="catmplt-header-full__branding">
+  <div id="catmplt-header-branding">
     <div>
       <!-- Site Logo -->
-      <div>...</div>
+      <div id="catmplt-header-logo">...</div>
 
       <!-- Search Trigger (Mobile) -->
       <details name="...">...</details>
@@ -56,7 +56,7 @@ The component's HTML structure must remain consistent, as the CSS utilizes direc
 
 ## CSS Parent-to-Children Selector Method
 
-The utility and branding bars are targeted by their IDs, rather than by their position as the first or last child. The CSS selectors `> div#catmplt-header-full__utility-bar` and `> div#catmplt-header-full__branding` select those direct children of the component's root wrapper. This keeps the bar-level styling tied to each bar's explicit identifier if sibling elements are added or reordered.
+The utility and branding bars are targeted by their IDs, rather than by their position as the first or last child. The CSS selectors `> div[id="catmplt-header-utility-bar"]` and `> div[id="catmplt-header-branding"]` select those direct children of the component's root wrapper. This keeps the bar-level styling tied to each bar's explicit identifier if sibling elements are added or reordered.
 
 Within each bar, the stylesheet uses direct-child selectors such as `> div` and `> nav` to target the internal structure. Keep the documented nesting in the HTML example consistent with those selectors.
 
@@ -68,10 +68,10 @@ Within each bar, the stylesheet uses direct-child selectors such as `> div` and 
 
 ### Implementation Details
 
-- **Utility Bar**: Targeted via `> div#catmplt-header-full__utility-bar`.
-- **Branding Bar**: Targeted via `> div#catmplt-header-full__branding`.
+- **Utility Bar**: Targeted via `> div[id="catmplt-header-utility-bar"]`.
+- **Branding Bar**: Targeted via `> div[id="catmplt-header-branding"]`.
 - **Containers**: Inner wrappers use width constraints and flexbox layout, targeted via direct-child selectors such as `> div`.
-- **Interactive Elements**: Search and Menu triggers use the native `<details>` element, with styles applied via `> details`.
+- **Interactive Elements**: Search and Menu triggers use the native `<details>` element, targeted by their `aria-controls` attributes.
 
 ## Responsive Behavior
 

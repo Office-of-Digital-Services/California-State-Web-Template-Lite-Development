@@ -65,7 +65,7 @@ catmplt-header {
     }
 
     /* cagov official styles */
-    > div#catmplt-header-full__utility-bar {
+    > div[id="catmplt-header-utility-bar"] {
       background-color: var(--color-p2-soft, #f5f9fa);
       min-height: 42px;
 
@@ -103,7 +103,7 @@ catmplt-header {
           align-items: center;
         }
 
-        > div:nth-of-type(2) {
+        > [id="catmplt-header-utility-links"] {
           display: flex;
           flex-direction: column;
           gap: 0.2rem;
@@ -139,7 +139,7 @@ catmplt-header {
           }
         }
 
-        > div:first-of-type {
+        > [id="catmplt-header-official"] {
           flex-shrink: 0;
           flex-grow: 1;
           display: flex;
@@ -170,7 +170,7 @@ catmplt-header {
 
     /* bottom bar/branding styles */
     /* stylelint-disable no-descending-specificity */
-    > div#catmplt-header-full__branding {
+    > div[id="catmplt-header-branding"] {
       border-bottom: 2px solid var(--gray-150, #e2e2e3);
 
       > div {
@@ -206,7 +206,7 @@ catmplt-header {
         }
 
         /* Site Logo */
-        > div:first-of-type {
+        > [id="catmplt-header-logo"] {
           flex-grow: 1;
           flex-shrink: 0;
 
@@ -240,7 +240,7 @@ catmplt-header {
                   display: block;
                 }
 
-                > span:first-of-type {
+                > [id="catmplt-header-logo-agency"] {
                   font-size: 0.78125rem;
 
                   @media (width >= 768px) {
@@ -248,7 +248,7 @@ catmplt-header {
                   }
                 }
 
-                > span:last-of-type {
+                > [id="catmplt-header-logo-title"] {
                   font-size: 1rem;
                   font-weight: 700;
                   line-height: 1.2;
@@ -263,7 +263,7 @@ catmplt-header {
         }
 
         /* Main menu styles */
-        > details:last-of-type {
+        > details[aria-controls="catmplt-header-main-menu"] {
           > summary {
             display: flex;
             align-items: center;
@@ -277,7 +277,7 @@ catmplt-header {
               display: none;
             }
 
-            > span {
+            > span[aria-hidden="true"] {
               position: relative;
               display: block;
               width: 34px;
@@ -314,7 +314,7 @@ catmplt-header {
               display: block;
             }
 
-            > summary > span {
+            > summary > span[aria-hidden="true"] {
               background-color: var(--white, #fff);
 
               &::before {
@@ -331,7 +331,7 @@ catmplt-header {
         }
 
         /* Search styles */
-        > details:first-of-type:not(:last-of-type) {
+        > details[aria-controls="catmplt-header-search"] {
           > summary {
             cursor: pointer;
             display: flex;
@@ -394,7 +394,7 @@ catmplt-header {
           }
         }
 
-        > #catmplt-header-full__cagov-search {
+        > [id="catmplt-header-search"] {
           display: none;
           width: 100%;
           order: 1;
@@ -450,7 +450,7 @@ catmplt-header {
           }
         }
 
-        > #catmplt-header-full__main-menu {
+        > [id="catmplt-header-main-menu"] {
           display: none;
           width: 100%;
           position: relative;

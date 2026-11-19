@@ -84,12 +84,12 @@ This region supports global CA.gov search access and should be preserved intact.
 div.cagov-utility-header
   div   /* Utility Wrapper */
     div /* Container */
-      div#catmplt-cagov-utility-header__utility-bar /* Utility Bar */
+      div#catmplt-cagov-utility-header-utility-bar /* Utility Bar */
         div      /* CA.gov logo */
         details  /* CA.gov menu button */
-        div#cagov-utility-header__menu-content /* CA.gov menu content */
+        div#catmplt-cagov-utility-header-menu-content /* CA.gov menu content */
         details  /* Search button */
-        div#cagov-utility-header__search-content /* Search content */
+        div#catmplt-cagov-utility-header-search-content /* Search content */
 ```
 
 CSS targets the utility bar, menu content, and search content by ID. The surrounding wrapper and container continue to use direct-child selectors for layout, and each `<details>` control remains adjacent to its associated collapsible panel.

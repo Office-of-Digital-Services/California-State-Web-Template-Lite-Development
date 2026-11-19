@@ -30,10 +30,10 @@ The component is wrapped in:
 
 ```html
 <div>
-  <div id="catmplt-cagov-header-full__utility-bar">
+  <div id="catmplt-cagov-header-full-utility-bar">
     <!-- Utility Bar -->
   </div>
-  <div id="catmplt-cagov-header-full__branding">
+  <div id="catmplt-cagov-header-full-branding">
     <!-- Bottom Bar / Branding -->
   </div>
 </div>
@@ -78,20 +78,20 @@ This region is the main branded interaction layer and should be preserved intact
 
 ```html
 div.cagov-header-full
-  div#catmplt-cagov-header-full__utility-bar  /* Utility Bar */
+  div#catmplt-cagov-header-full-utility-bar  /* Utility Bar */
     div
       details  /* Official California website */
       div      /* Official California website content */
-      div#catmplt-cagov-header-full__login-link  /* Login */
+      div#catmplt-cagov-header-full-login-link  /* Login */
       details  /* Utility menu */
-      div#cagov-header-full__utility-menu  /* Utility navigation */
-  div#catmplt-cagov-header-full__branding  /* Bottom Bar / Branding */
+      div#catmplt-cagov-header-full-utility-menu  /* Utility navigation */
+  div#catmplt-cagov-header-full-branding  /* Bottom Bar / Branding */
     div
       div      /* CA.gov logo */
       details  /* Search button */
-      div#cagov-header-full__search-form  /* Search form */
+      div#catmplt-cagov-header-full-search-form  /* Search form */
       details  /* Main menu */
-      div#cagov-header-full__main-menu-content  /* Main navigation */
+      div#catmplt-cagov-header-full-main-menu-content  /* Main navigation */
 ```
 
 CSS targets the utility and branding bars by ID. The login, utility menu, search form, and main-menu content are also selected by their explicit IDs; direct-child selectors remain for the nested layout.

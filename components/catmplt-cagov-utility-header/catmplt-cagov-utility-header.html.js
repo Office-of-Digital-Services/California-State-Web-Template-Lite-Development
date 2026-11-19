@@ -38,7 +38,7 @@ function detailsNamePolyfill() {
  */
 function cagovUtilityHeaderAccessibilityToggle() {
   const detailsToggles = document.querySelectorAll(
-    'details[name="cagov-utility-header__buttongroup"]'
+    'details[name="catmplt-cagov-utility-header-buttongroup"]'
   );
 
   detailsToggles.forEach(detailsToggle => {
